@@ -1,0 +1,23 @@
+# User-specific files
+*.bak
+*.swp
+*.o
+*/*.o
+*/*.d
+*/*.a
+*/*.pc
+*/*.version
+*/*/*.o
+*/*/*.d
+output
+cmake_build
+.vscode
+config.h
+ffmpeg
+ffmpeg_g
+ffprobe
+ffprobe_g
+*install
+.version
+3rdpartys/x264-stable/install/
+!.gitkeep
