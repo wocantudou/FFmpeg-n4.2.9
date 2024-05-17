@@ -15,8 +15,9 @@ TARGET_OS=linux
 
 # CPU=${ARCH}
 CPU=armv8-a
-PREFIX=${ffmpeg_root_path}/install/${ARCH}-linux-ffmpeg4.2.9
+# PREFIX=${ffmpeg_root_path}/install/${ARCH}-linux-ffmpeg4.2.9
 # PREFIX=/data/wensha2/tool/ffmpeg4.2.9/install/${ARCH}-linux-ffmpeg4.2.9
+PREFIX=/home/wensha2/workspace/opt/ffmpeg4.2.9/install/${ARCH}-linux-ffmpeg4.2.9
 
 TOOL_CHAIN_PREFIX=/data/wensha2/tool/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu/bin/${ARCH}-linux-gnu-
 
@@ -49,7 +50,7 @@ build()
     configure
     cd ${ffmpeg_root_path}
     make clean
-    make -j
+    make -j2
     make install
 }
 

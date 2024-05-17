@@ -9,8 +9,6 @@
 */*.version
 */*/*.o
 */*/*.d
-output
-cmake_build
 .vscode
 config.h
 ffmpeg

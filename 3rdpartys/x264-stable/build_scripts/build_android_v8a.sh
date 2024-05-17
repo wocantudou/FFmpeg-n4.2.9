@@ -39,7 +39,7 @@ build()
     configure
     cd ${x264_root_path}
     make clean
-    make -j
+    make -j2
     make install
 }
 

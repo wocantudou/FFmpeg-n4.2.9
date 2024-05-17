@@ -15,8 +15,9 @@ TARGET_OS=qnx
 
 # CPU=${ARCH}
 CPU=armv8-a
-PREFIX=${ffmpeg_root_path}/install/$ARCH-qnx700-ffmpeg4.2.9
+# PREFIX=${ffmpeg_root_path}/install/$ARCH-qnx700-ffmpeg4.2.9
 # PREFIX=/data/wensha2/tool/ffmpeg4.2.9/install/$ARCH-qnx700-ffmpeg4.2.9
+PREFIX=/home/wensha2/workspace/opt/ffmpeg4.2.9/install/$ARCH-qnx700-ffmpeg4.2.9
 
 TOOL_CHAIN_PREFIX=aarch64-unknown-nto-qnx7.0.0-
 
@@ -51,7 +52,7 @@ build()
     configure
     cd ${ffmpeg_root_path}
     make clean
-    make -j
+    make -j2
     make install
 }
 

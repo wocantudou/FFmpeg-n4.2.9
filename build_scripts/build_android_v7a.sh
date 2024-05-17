@@ -14,8 +14,9 @@ NDK_ROOT=/data/wensha2/tool/android-ndk-r16b
 TARGET_OS=android
 ARCH=arm
 CPU=armv7-a
-PREFIX=${ffmpeg_root_path}/install/${HOST}-ffmpeg4.2.9
+# PREFIX=${ffmpeg_root_path}/install/${HOST}-ffmpeg4.2.9
 # PREFIX=/data/wensha2/tool/ffmpeg4.2.9/install/${HOST}-ffmpeg4.2.9
+PREFIX=/home/wensha2/workspace/opt/ffmpeg4.2.9/install/${HOST}-ffmpeg4.2.9
 
 TOOL_CHAIN_PREFIX=${NDK_ROOT}/toolchains/${HOST}-4.9/prebuilt/linux-x86_64/bin/${HOST}-
 # <23 not support stderr
@@ -52,7 +53,7 @@ build()
     configure
     cd ${ffmpeg_root_path}
     make clean
-    make -j
+    make -j2
     make install
 }
 

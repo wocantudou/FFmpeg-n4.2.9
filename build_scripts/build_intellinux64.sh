@@ -14,8 +14,9 @@ X264_HEADER=$X264_PATH/include
 TARGET_OS=x86_64
 CPU=${ARCH}
 
-PREFIX=${ffmpeg_root_path}/install/${ARCH}-intellinux64-ffmpeg4.2.9
+# PREFIX=${ffmpeg_root_path}/install/${ARCH}-intellinux64-ffmpeg4.2.9
 # PREFIX=/data/wensha2/tool/ffmpeg4.2.9/install/${ARCH}-intellinux64-ffmpeg4.2.9
+PREFIX=/home/wensha2/workspace/opt/ffmpeg4.2.9/install/${ARCH}-intellinux64-ffmpeg4.2.9
 
 ECFLAGS="-I${X264_HEADER}"
 # ECXXFLAGS="-std=c++11 -fPIC -I${X264_HEADER}"
@@ -44,7 +45,7 @@ build()
     configure
     cd ${ffmpeg_root_path}
     make clean
-    make -j
+    make -j2
     make install
 }
 
